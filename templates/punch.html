@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>punch List</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Punch</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for pdata in punch %}
+        <tr>
+            <td>{{ pdata[0] }}</td>
+            <td>{{ pdata[1] }}</td>
+            <td>{{ pdata[2] }}</td>
+            <td>{{ pdata[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">← Back to Home</a>
+</body>
+</html>
+
